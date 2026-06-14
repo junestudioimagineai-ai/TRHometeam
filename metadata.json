@@ -1,0 +1,8 @@
+{
+  "name": "Thomas Rhett Fan Hub",
+  "description": "Enterprise-grade superfan platform for Thomas Rhett.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
