@@ -7,9 +7,31 @@ export default function EventsPage() {
   const isVip = profile?.membershipTier === 'vip' || profile?.membershipTier === 'gold';
 
   const events = [
-    { id: 1, title: 'Summer Tour 2026 - Nashville', date: 'AUG 15, 2026 • 7:00 PM', venue: 'Nissan Stadium', vipOnly: false },
-    { id: 2, title: 'Intimate Acoustic Set - Atlanta', date: 'SEP 02, 2026 • 8:00 PM', venue: 'The Tabernacle', vipOnly: true },
-    { id: 3, title: 'Virtual Meet & Greet', date: 'SEP 10, 2026 • 5:00 PM EST', venue: 'Online / Home Team App', vipOnly: true },
+    { id: 1, title: 'Headline Show with Niall Horan', date: 'JUL 09, 2026 • 7:00 PM', venue: 'Geodis Park, Nashville TN', vipOnly: false },
+    { id: 2, title: 'The Soundtrack to Life Tour', date: 'JUL 11, 2026 • 7:30 PM', venue: 'Bon Secours Wellness Arena, Greenville SC', vipOnly: false },
+    { id: 3, title: 'The Soundtrack to Life Tour', date: 'JUL 16, 2026 • 8:00 PM', venue: 'The Meadows Music Theatre, Hartford CT', vipOnly: false },
+    { id: 4, title: 'The Soundtrack to Life Tour', date: 'JUL 17, 2026 • 7:00 PM', venue: 'BankNH Pavilion, Gilford NH', vipOnly: false },
+    { id: 5, title: 'Headline Show with Niall Horan', date: 'JUL 18, 2026 • 7:00 PM', venue: 'Hersheypark Stadium, Hershey PA', vipOnly: false },
+    { id: 6, title: 'Morgan Wallen Still The Problem Tour', date: 'JUL 24, 2026 • 7:00 PM', venue: 'Michigan Stadium, Ann Arbor MI', vipOnly: false },
+    { id: 7, title: 'Luke Combs Tour (Night 1)', date: 'JUL 31, 2026 • 8:00 PM', venue: 'Wembley Stadium, London UK', vipOnly: false },
+    { id: 8, title: 'Luke Combs Tour (Night 2)', date: 'AUG 01, 2026 • 8:00 PM', venue: 'Wembley Stadium, London UK', vipOnly: false },
+    { id: 9, title: 'Luke Combs Tour (Night 3)', date: 'AUG 02, 2026 • 8:00 PM', venue: 'Wembley Stadium, London UK', vipOnly: false },
+    { id: 10, title: 'WE Fest', date: 'AUG 07, 2026 • 6:00 PM', venue: 'Soo Pass Ranch, Detroit Lakes MN', vipOnly: false },
+    { id: 11, title: 'Thomas Rhett Tour', date: 'AUG 13, 2026 • 7:30 PM', venue: 'Merriweather Post Pavilion, Columbia MD', vipOnly: false },
+    { id: 12, title: 'Thomas Rhett Tour', date: 'AUG 14, 2026 • 7:30 PM', venue: 'Bethel Woods Center for the Arts, Bethel NY', vipOnly: false },
+    { id: 13, title: 'Lasso Festival', date: 'AUG 15, 2026 • 7:00 PM', venue: 'Parc Jean-Drapeau, Montreal QC', vipOnly: false },
+    { id: 14, title: 'Thomas Rhett Tour', date: 'AUG 20, 2026 • 7:30 PM', venue: 'Ford Center, Evansville IN', vipOnly: false },
+    { id: 15, title: 'LIV Golf After Play', date: 'AUG 21, 2026 • 8:00 PM', venue: 'Indianapolis IN', vipOnly: false },
+    { id: 16, title: 'Thomas Rhett Tour', date: 'AUG 22, 2026 • 7:30 PM', venue: 'Acrisure Amphitheater, Grand Rapids MI', vipOnly: false },
+    { id: 17, title: 'Virtual Fan M&G - VIP Only', date: 'SEP 05, 2026 • 5:00 PM', venue: 'Online / Home Team App', vipOnly: true },
+    { id: 18, title: 'Thomas Rhett Tour', date: 'SEP 10, 2026 • 7:30 PM', venue: 'KFC Yum! Center, Louisville KY', vipOnly: false },
+    { id: 19, title: 'Thomas Rhett Tour', date: 'SEP 11, 2026 • 7:30 PM', venue: 'Schottenstein Center, Columbus OH', vipOnly: false },
+    { id: 20, title: 'Thomas Rhett Tour', date: 'SEP 12, 2026 • 7:30 PM', venue: 'Blossom Music Center, Cuyahoga Falls OH', vipOnly: false },
+    { id: 21, title: 'Thomas Rhett Tour', date: 'SEP 17, 2026 • 7:30 PM', venue: 'Moody Center, Austin TX', vipOnly: false },
+    { id: 22, title: 'Thomas Rhett Tour', date: 'SEP 18, 2026 • 7:30 PM', venue: 'American Airlines Center, Dallas TX', vipOnly: false },
+    { id: 23, title: 'Thomas Rhett Tour', date: 'SEP 19, 2026 • 7:30 PM', venue: 'BOK Center, Tulsa OK', vipOnly: false },
+    { id: 24, title: 'Thomas Rhett Tour', date: 'OCT 02, 2026 • 7:30 PM', venue: 'Honda Center, Anaheim CA', vipOnly: false },
+    { id: 25, title: 'Thomas Rhett Tour', date: 'OCT 03, 2026 • 7:30 PM', venue: 'Golden 1 Center, Sacramento CA', vipOnly: false },
   ];
 
   return (

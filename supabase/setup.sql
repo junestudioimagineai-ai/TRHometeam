@@ -322,5 +322,43 @@ end;
 $$ language plpgsql security definer;
 
 -- ========================================================================================
+-- 6. STORAGE BUCKETS
+-- ========================================================================================
+-- This section assumes you have the Storage API enabled in your Supabase project.
+
+insert into storage.buckets (id, name, public) values 
+  ('hero-images', 'hero-images', true),
+  ('album-artwork', 'album-artwork', true),
+  ('event-images', 'event-images', true),
+  ('community-media', 'community-media', true),
+  ('merchandise-images', 'merchandise-images', true)
+on conflict (id) do nothing;
+
+create policy "Images are publicly accessible"
+  on storage.objects for select
+  using ( bucket_id in ('hero-images', 'album-artwork', 'event-images', 'community-media', 'merchandise-images') );
+
+create policy "Admins can upload images"
+  on storage.objects for insert
+  with check ( 
+    bucket_id in ('hero-images', 'album-artwork', 'event-images', 'community-media', 'merchandise-images') 
+    and exists (select 1 from public.profiles where id = auth.uid() and role in ('admin', 'superadmin'))
+  );
+
+create policy "Admins can update images"
+  on storage.objects for update
+  using ( 
+    bucket_id in ('hero-images', 'album-artwork', 'event-images', 'community-media', 'merchandise-images') 
+    and exists (select 1 from public.profiles where id = auth.uid() and role in ('admin', 'superadmin'))
+  );
+
+create policy "Admins can delete images"
+  on storage.objects for delete
+  using ( 
+    bucket_id in ('hero-images', 'album-artwork', 'event-images', 'community-media', 'merchandise-images') 
+    and exists (select 1 from public.profiles where id = auth.uid() and role in ('admin', 'superadmin'))
+  );
+
+-- ========================================================================================
 -- DONE
 -- ========================================================================================
