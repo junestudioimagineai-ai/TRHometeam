@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './lib/AuthContext';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 import Layout from './components/layout/Layout';
+import ScrollToTop from './components/layout/ScrollToTop';
 import HomePage from './pages/HomePage';
 import DashboardPage from './pages/DashboardPage';
 import CommunityPage from './pages/CommunityPage';
@@ -25,6 +26,7 @@ export default function App() {
   return (
     <AuthProvider>
       <Router>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
